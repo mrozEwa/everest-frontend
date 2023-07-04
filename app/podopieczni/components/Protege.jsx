@@ -26,8 +26,8 @@ function Protege({ protege }) {
           <Image
             src={`https:${protege.fields.image.fields.file.url}`}
             alt={protege.fields.name + " " + protege.fields.surname}
-            width={270}
-            height={300}
+            width={240}
+            height={240}
             style={{ borderRadius: "10px" }}
           />
           <Stack mt="6" spacing="3">

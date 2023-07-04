@@ -68,7 +68,7 @@ export default function page() {
               <WrapItem>
                 <Box>
                   <Heading>Kontakt</Heading>
-                  <Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
+                  <Text mt={{ sm: 3, md: 3, lg: 5 }} color="white">
                     Masz pytanie, napisz do nas
                   </Text>
                   <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>

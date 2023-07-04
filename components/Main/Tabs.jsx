@@ -9,6 +9,7 @@ import {
   Container,
   Text,
   Divider,
+  Heading,
   Flex,
   Grid,
   useBreakpointValue,
@@ -64,7 +65,8 @@ function TabsComponent() {
           <Grid gridTemplateColumns={gridTemplateColumns}>
             <Container maxW="5xl" color="blue.50" py={8} px={8}>
               <Flex align="start">
-                <Text
+                <Heading
+                  as="h2"
                   fontSize="24px"
                   fontWeight="700"
                   mb="4"
@@ -72,7 +74,7 @@ function TabsComponent() {
                   mr="20px"
                 >
                   Możesz wpłacić darowiznę
-                </Text>
+                </Heading>
                 <BiDonateHeart size="45px" />
               </Flex>
 
@@ -91,7 +93,8 @@ function TabsComponent() {
               </Box>
 
               <Flex align="center">
-                <Text
+                <Heading
+                  as="h2"
                   fontSize="24px"
                   fontWeight="700"
                   mt="8"
@@ -100,7 +103,7 @@ function TabsComponent() {
                   mr="20px"
                 >
                   Możesz biec razem z nami
-                </Text>
+                </Heading>
                 <BiRun size="45px" />
               </Flex>
               <Divider mb={8} />

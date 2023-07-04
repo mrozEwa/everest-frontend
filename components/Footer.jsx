@@ -59,73 +59,79 @@ export default function Footer() {
       color={useColorModeValue("gray.700", "gray.200")}
       pt="10"
     >
-      <Container as={Stack} maxW={"8xl"} pt={2} pb={8} px={10}>
-        <SimpleGrid
-          templateColumns={{ sm: "1fr 1fr", md: "2fr 2fr 2fr " }}
-          spacing={8}
-        >
-          <Stack spacing={4}>
-            <Box w="200px">
-              <Image src={"logo.png"} alt="logo" ml="-14px" />
-              {/* <Logo color={useColorModeValue("gray.700", "white")} /> */}
-            </Box>
-            <Text fontSize={"sm"}>
-              © 2023 Fundacja Everest. All rights reserved
-            </Text>
-            <Text fontSize={"sm"}>
-              Created by{" "}
-              <Link
-                href="https://robertzuk.pl/"
-                target="blank"
-                isExternal
-                color="blue.700"
-                fontWeight={600}
-              >
-                Robert Żuk
-              </Link>
-            </Text>
-          </Stack>
-          <Stack align={"flex-start"}>
-            <Text fontSize={"sm"} fontWeight={500}>
-              Fundacja Everest
-            </Text>
-            <Text fontSize={"sm"}>ul. Wielka 67</Text>
-            <Text fontSize={"sm"}>53-340 Wrocław</Text>
-            <Text fontSize={"sm"}>NIP: 8943043429</Text>
-            <spacer></spacer>
-            <Text fontSize={"sm"} fontWeight={500}>
-              Numer konta: 41 1140 1140 0000 3822 7400 1006
-            </Text>
-          </Stack>
-          <Stack align={"flex-start"}>
-            <Text fontSize={"md"}>Masz pytania ?</Text>
-            <Stack direction={"column"}>
-              <Link href="/kontakt">
-                <Button
-                  leftIcon={<EmailIcon />}
-                  px={6}
-                  bg={"gray.200"}
-                  fontSize={"sm"}
+      <footer>
+        <Container as={Stack} maxW={"8xl"} pt={2} pb={8} px={10}>
+          <SimpleGrid
+            templateColumns={{ sm: "1fr 1fr", md: "2fr 2fr 2fr " }}
+            spacing={8}
+          >
+            <Stack spacing={4}>
+              <Box w="200px">
+                <Image
+                  src={"logo.png"}
+                  ml="-14px"
+                  alt="fundacja everest logo"
+                />
+                {/* <Logo color={useColorModeValue("gray.700", "white")} /> */}
+              </Box>
+              <Text fontSize={"sm"}>
+                © 2023 Fundacja Everest. All rights reserved
+              </Text>
+              <Text fontSize={"sm"}>
+                Created by{" "}
+                <Link
+                  href="https://robertzuk.pl/"
+                  target="blank"
+                  isexternal="true"
+                  color="blue.700"
+                  fontWeight={600}
                 >
-                  Napisz do nas
-                </Button>
-              </Link>
-              <Text fontSize={"sm"}>ewa@fundacjaeverest.pl</Text>
-              <Stack direction={"row"} spacing={6} pt={2}>
-                <SocialButton label={"Facebook"} href={"#"}>
-                  <FaFacebook />
-                </SocialButton>
-                <SocialButton
-                  label={"YouTube"}
-                  href={"https://www.youtube.com/@BiegFirmowy"}
-                >
-                  <FaYoutube />
-                </SocialButton>
+                  Robert Żuk
+                </Link>
+              </Text>
+            </Stack>
+            <Stack align={"flex-start"}>
+              <Text fontSize={"sm"} fontWeight={500}>
+                Fundacja Everest
+              </Text>
+              <Text fontSize={"sm"}>ul. Wielka 67</Text>
+              <Text fontSize={"sm"}>53-340 Wrocław</Text>
+              <Text fontSize={"sm"}>NIP: 8943043429</Text>
+              <spacer></spacer>
+              <Text fontSize={"sm"} fontWeight={500}>
+                Numer konta: 41 1140 1140 0000 3822 7400 1006
+              </Text>
+            </Stack>
+            <Stack align={"flex-start"}>
+              <Text fontSize={"md"}>Masz pytania ?</Text>
+              <Stack direction={"column"}>
+                <Link href="/kontakt">
+                  <Button
+                    leftIcon={<EmailIcon />}
+                    px={6}
+                    bg={"gray.200"}
+                    fontSize={"sm"}
+                  >
+                    Napisz do nas
+                  </Button>
+                </Link>
+                <Text fontSize={"sm"}>ewa@fundacjaeverest.pl</Text>
+                <Stack direction={"row"} spacing={6} pt={2}>
+                  <SocialButton label={"Facebook"} href={"#"}>
+                    <FaFacebook />
+                  </SocialButton>
+                  <SocialButton
+                    label={"YouTube"}
+                    href={"https://www.youtube.com/@BiegFirmowy"}
+                  >
+                    <FaYoutube />
+                  </SocialButton>
+                </Stack>
               </Stack>
             </Stack>
-          </Stack>
-        </SimpleGrid>
-      </Container>
+          </SimpleGrid>
+        </Container>
+      </footer>
     </Box>
   );
 }

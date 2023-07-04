@@ -14,7 +14,6 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Link } from "@chakra-ui/next-js";
 import Image from "next/image";
 import { BiRun } from "react-icons/bi";
-import { AiOutlineHome } from "react-icons/ai";
 import { usePathname } from "next/navigation";
 
 import Logo from "@/public/logo-transparent.webp";
@@ -85,6 +84,7 @@ export default function Navigation({ children }) {
   return (
     <nav>
       <Box position="fixed" w="full" zIndex={"2"}>
+        <h1 style={{ display: "none" }}>Fundacja Everest</h1>
         <Flex
           h={24}
           alignItems={"center"}
@@ -119,7 +119,7 @@ export default function Navigation({ children }) {
           <HStack alignItems={"center"}>
             <Flex minW={300} justify={"end"} mr={12}>
               <Link href="/">
-                <Image src={Logo} alt="logo" width={"220"} />
+                <Image src={Logo} alt="logo fundacja everest" width={"220"} />
               </Link>
             </Flex>
             <HStack

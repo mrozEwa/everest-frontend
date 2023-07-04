@@ -42,7 +42,6 @@ function Docs({ docs }) {
             variant="solid"
             href="statut.pdf"
             target="_blank"
-            download
           >
             Statut fundacji
           </Button>
@@ -56,7 +55,6 @@ function Docs({ docs }) {
               variant="solid"
               href={doc.fields.dokument.fields.file.url}
               target="_blank"
-              download
             >
               Sprawozdanie {doc.fields.name}
             </Button>
