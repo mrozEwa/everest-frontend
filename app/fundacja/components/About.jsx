@@ -82,11 +82,11 @@ export default function page() {
                 naszym biegu.
               </Text>
               <Text>
-                Do tej pory udało nam się zorganizować 10 edycji Biegów
+                Do tej pory udało nam się zorganizować 11 edycji Biegów
                 Firmowych – we Wrocławiu i Warszawie, w tym dwie wyjątkowe
-                odsłony Biegu Firmowego online. Łącznie pobiegło z nami już 66
-                000 osób z ponad 2 100 firm. Na rzecz naszych podopiecznych
-                udało się przekazać 1 743 095 złotych.
+                odsłony Biegu Firmowego online. Łącznie pobiegło z nami już 77
+                500 osób z ponad 2 200 firm. Na rzecz naszych podopiecznych
+                udało się przekazać 2 283 518 złotych.
               </Text>
               <Text>
                 Każdego roku wybieramy podopiecznych Biegu Firmowego. Nasi

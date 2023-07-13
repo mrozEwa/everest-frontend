@@ -32,8 +32,8 @@ function Main() {
               .
             </Text>
             <Text color="white" fontSize="lg" lineHeight={2}>
-              <b>1 743 095 zł </b> to kwota, którą udało nam się przekazać na
-              leczenie i rehabilitację podopiecznych Fundacji Everest przez 10
+              <b>2 283 518 zł </b> to kwota, którą udało nam się przekazać na
+              leczenie i rehabilitację podopiecznych Fundacji Everest przez 11
               edycji Biegu Firmowego.
             </Text>
           </VStack>
