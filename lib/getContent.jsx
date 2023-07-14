@@ -1,14 +1,14 @@
 import { createClient } from "contentful";
 
-export default async function getProteges() {
+export default async function getContent() {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
   const res = await client.getEntries({
-    content_type: "podopieczny",
-    order: "-sys.createdAt",
+    content_type: "content",
+    order: "sys.createdAt",
   });
 
   return {

@@ -1,24 +1,15 @@
 "use client";
 import {
-  Box,
   Button,
-  chakra,
   Container,
-  SimpleGrid,
-  Stack,
   Text,
-  VisuallyHidden,
-  Image,
-  useColorModeValue,
   Flex,
   VStack,
-  HStack,
   Divider,
 } from "@chakra-ui/react";
 import { BsFiletypePdf } from "react-icons/bs";
 
 function Docs({ docs }) {
-  docs.data.forEach((item) => console.log(item.fields.name));
   return (
     <Container my={10}>
       <VStack>

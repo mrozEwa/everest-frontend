@@ -38,7 +38,7 @@ const Team = [
   },
 ];
 
-export default function page() {
+export default function About({ content }) {
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -82,11 +82,7 @@ export default function page() {
                 naszym biegu.
               </Text>
               <Text>
-                Do tej pory udało nam się zorganizować 11 edycji Biegów
-                Firmowych – we Wrocławiu i Warszawie, w tym dwie wyjątkowe
-                odsłony Biegu Firmowego online. Łącznie pobiegło z nami już 77
-                500 osób z ponad 2 200 firm. Na rzecz naszych podopiecznych
-                udało się przekazać 2 283 518 złotych.
+                {content.data[2].fields.tresc.content[0].content[0].value}
               </Text>
               <Text>
                 Każdego roku wybieramy podopiecznych Biegu Firmowego. Nasi

@@ -1,40 +1,31 @@
 "use client";
 
-import {
-  Box,
-  Text,
-  Container,
-  VStack,
-  StackDivider,
-  Heading,
-} from "@chakra-ui/react";
+import { Box, Text, Container, VStack, StackDivider } from "@chakra-ui/react";
 import Tabs from "./Tabs";
 
-function Main() {
+function Main({ content }) {
   return (
     <Box>
       <Box bg="green.600" py={12} boxShadow="md">
         <Container maxW="5xl">
           <VStack divider={<StackDivider borderColor="gray.200" />} spacing={4}>
             <Text color="white" fontSize="lg" lineHeight={2}>
-              <b> Fundacja Everest </b> powstała w 2012 roku. Inspiracją do jej
-              utworzenia była nasza pasja – bieganie. Zastanawialiśmy się jak
-              można pomóc innym wykorzystując nasze zamiłowanie do sportu i
-              biegania. Zainspirowani setkami przebiegniętych kilometrów
-              powołaliśmy do życia pomysł organizacji charytatywnego{" "}
+              <b>{content.data[0].fields.tresc.content[0].content[0].value}</b>
+              {content.data[0].fields.tresc.content[0].content[1].value}
               <Text
                 as="a"
                 href="https://biegfirmowy.pl/"
                 textDecoration={"underline"}
               >
-                Biegu Firmowego
+                {
+                  content.data[0].fields.tresc.content[0].content[2].content[0]
+                    .value
+                }
               </Text>
-              .
             </Text>
             <Text color="white" fontSize="lg" lineHeight={2}>
-              <b>2 283 518 zł </b> to kwota, którą udało nam się przekazać na
-              leczenie i rehabilitację podopiecznych Fundacji Everest przez 11
-              edycji Biegu Firmowego.
+              <b>{content.data[1].fields.tresc.content[0].content[0].value} </b>
+              {content.data[1].fields.tresc.content[0].content[1].value}
             </Text>
           </VStack>
         </Container>
