@@ -8,7 +8,7 @@ export default async function getProteges() {
 
   const res = await client.getEntries({
     content_type: "podopieczny",
-    order: "-sys.createdAt",
+    order: "sys.createdAt",
   });
 
   return {
