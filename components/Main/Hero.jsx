@@ -16,7 +16,7 @@ export default function Hero() {
     <Flex
       w={"full"}
       h={"100vh"}
-      backgroundImage={"url(header.jpg)"}
+      backgroundImage={"url(header.webp)"}
       backgroundSize={"cover"}
       backgroundPosition={"top 14% center"}
       filter="brightness(1.2) sepia(40%) "
