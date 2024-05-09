@@ -8,7 +8,7 @@ export default async function page() {
   return (
     <div>
       <Proteges>
-        {proteges.data.map((protege, index) => (
+        {proteges?.data?.map((protege, index) => (
           <Protege protege={protege} key={index} />
         ))}
       </Proteges>
