@@ -4,6 +4,7 @@ import { Box, Text, Container, VStack, StackDivider } from "@chakra-ui/react";
 import Tabs from "./Tabs";
 
 function Main({ content }) {
+  console.log(content.data[1].fields.tresc.content[0].content.fo);
   return (
     <Box>
       <Box bg="green.600" py={12} boxShadow="md">
@@ -22,7 +23,10 @@ function Main({ content }) {
                     .value
                 }
               </Text>
+              <br />
+              {content.data[0].fields.tresc.content[1].content[0].value}
             </Text>
+
             <Text color="white" fontSize="lg" lineHeight={2}>
               <b>{content.data[1].fields.tresc.content[0].content[0].value} </b>
               {content.data[1].fields.tresc.content[0].content[1].value}
