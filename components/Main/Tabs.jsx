@@ -19,8 +19,19 @@ import {
 } from "@chakra-ui/react";
 import { BiDonateHeart } from "react-icons/bi";
 import { BiRun } from "react-icons/bi";
+import { FaHandsHelping } from "react-icons/fa";
 
-function TabsComponent() {
+/*************  ✨ Windsurf Command ⭐  *************/
+/**
+ * TabsComponent renders a tabbed interface with two main options: "Pomagam" (I help) and "Potrzebuję pomocy" (I need help).
+ * It uses Chakra UI components to create a responsive layout that adapts based on breakpoints.
+ * The component includes animations, icons, and styled elements to enhance user interaction.
+ * 
+ * - "Pomagam" tab offers options to donate, run in charity events, or volunteer at a respite camp.
+ * - "Potrzebuję pomocy" tab provides information for individuals in need to contact the foundation for assistance.
+ * 
+
+/*******  3af65c81-3670-4bf4-bc6c-0e3472dbbce6  *******/ function TabsComponent() {
   const beforeContent = useBreakpointValue({
     base: "none",
     xl: "block",
@@ -63,22 +74,23 @@ function TabsComponent() {
       <TabPanels>
         <TabPanel p={0} bg="blue.700" animation={`${slideIn} .6s ease-in-out`}>
           <Grid gridTemplateColumns={gridTemplateColumns}>
-            <Container maxW="5xl" color="blue.50" py={8} px={8}>
-              <Flex align="start">
+            <Container maxW="5xl" color="blue.50" py={4} px={8}>
+              <Flex align="end">
                 <Heading
                   as="h2"
-                  fontSize="24px"
+                  fontSize="22px "
                   fontWeight="700"
-                  mb="4"
+                  mt="2"
+                  pb="2"
                   textAlign="left"
                   mr="20px"
                 >
                   Możesz wpłacić darowiznę
                 </Heading>
-                <BiDonateHeart size="45px" />
+                <BiDonateHeart size="40px" />
               </Flex>
 
-              <Divider mb={8} />
+              <Divider mb={2} />
               <Box fontSize="lg" lineHeight={1.7} textAlign="left">
                 <Text>Fundacja Everest, ul. Wielka 67, 53-340 Wrocław</Text>
                 <Text fontWeight="600">41 1140 1140 0000 3822 7400 1006</Text>
@@ -92,34 +104,52 @@ function TabsComponent() {
                 </Text>
               </Box>
 
-              <Flex align="center">
+              <Flex align="end">
                 <Heading
-                  as="h2"
-                  fontSize="24px"
+                  as="h3"
+                  fontSize="22px "
                   fontWeight="700"
                   mt="8"
-                  pb="6"
+                  pb="2"
                   textAlign="left"
                   mr="20px"
                 >
                   Możesz biec razem z nami
                 </Heading>
-                <BiRun size="45px" />
+                <BiRun size="40px" />
               </Flex>
-              <Divider mb={8} />
+              <Divider mb={2} />
               <Box fontSize="lg" lineHeight={1.7} textAlign="left">
                 <Text>
-                  Łączy nas wspólny cel. Bieg Firmowy to przede wszystkim pomoc
-                  dzieciom chorym i niepełnosprawnym. Poprzez wydarzenie, a w
-                  tym roku wirtualną formę imprezy biegowej, promujemy team
-                  building, pomoc małym bohaterom i zdrowy tryb życia.
+                  Łączy nas wspólny cel - pomoc dzieciom chorym i
+                  niepełnosprawnym. Biegnij i zacznij pomagać razem z tysiącem
+                  innych firm!
                 </Text>
+              </Box>
+              <Flex align="center" justify="center">
+                <Heading
+                  as="h3"
+                  fontSize="22px"
+                  fontWeight="700"
+                  mt="8"
+                  pb="2"
+                  textAlign="left"
+                  mr="20px"
+                >
+                  Możesz zostać wolontariuszem na obozie wytchnieniowym
+                </Heading>
+                <FaHandsHelping size="42px" />
+              </Flex>
+              <Divider mb={0} />
+              <Box fontSize="lg" lineHeight={1.7} textAlign="left">
                 <Text>
-                  Myślisz o tym, jak zaktywizować pracowników Twojej firmy?
+                  Chcesz spędzić 5 dni w wyjątkowym miejscu, pomagając dzieciom
+                  lub dorosłym z niepełnosprawnością? Szukamy osób, które przez
+                  6 godzin dziennie będą towarzyszyć uczestnikom turnusu,
+                  wspierać ich w codziennych aktywnościach i tworzyć razem z
+                  nami atmosferę akceptacji i radości.
                 </Text>
-                <Text>
-                  Biegnij i zacznij pomagać razem z tysiącem innych firm!
-                </Text>
+                <Text>Zgłoś się</Text>
               </Box>
             </Container>
             <Box
@@ -148,7 +178,7 @@ function TabsComponent() {
             <Container maxW="5xl" color="blue.50" py={12} px={8}>
               <Flex align="center">
                 <Text
-                  fontSize="24px"
+                  fontSize="22px "
                   fontWeight="700"
                   mb="4"
                   textAlign="left"
