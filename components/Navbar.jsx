@@ -117,7 +117,7 @@ export default function Navigation({ children }) {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack alignItems={"center"}>
-            <Flex minW={300} justify={"end"} mr={12}>
+            <Flex minW={300} justify={"end"}>
               <Link href="/">
                 <Image src={Logo} alt="logo fundacja everest" width={"220"} />
               </Link>

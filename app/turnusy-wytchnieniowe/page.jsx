@@ -39,20 +39,20 @@ export default function page() {
     });
   }, []);
 
-  const slide = keyframes`
-  0% {
-    transform: translateY(-10%);
-        opacity: 0;
-  }
-  50% {
-    transform: translateY(2%);
-    opacity: .6;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-`;
+  //   const slide = keyframes`
+  //   0% {
+  //     transform: translateY(-10%);
+  //         opacity: 0;
+  //   }
+  //   50% {
+  //     transform: translateY(2%);
+  //     opacity: .6;
+  //   }
+  //   100% {
+  //     transform: translateY(0%);
+  //     opacity: 1;
+  //   }
+  // `;
 
   const sections = [
     {
@@ -74,7 +74,7 @@ To czas na regenerację i zadbanie o siebie – bez poczucia winy.`,
       text: `Podczas turnusów dostępne są indywidualne konsultacje psychologiczne oraz codzienne kręgi wsparcia. Zapraszamy do nich wszystkich uczestników – rodziny, wolontariuszy i osoby z niepełnosprawnością.
 
 To przestrzeń dzielenia się, słuchania i bycia wysłuchanym.`,
-      image: "./children1.jpg",
+      image: "./children3.jpg",
     },
     {
       title: "Integracja i wspólna radość",
@@ -91,7 +91,7 @@ Chcemy, by każdy uczestnik – niezależnie od wieku i sprawności – poczuł 
       maxW="full"
       pt={24}
       overflow="hidden"
-      animation={`${slide} .8s ease-in-out`}
+      // animation={`${slide} .8s ease-in-out`}
     >
       <Box
         bgGradient="linear(to-t, white, blue.100)"
@@ -160,7 +160,7 @@ Chcemy, by każdy uczestnik – niezależnie od wieku i sprawności – poczuł 
       </VStack>
       <Box
         bgGradient="linear(to-b, blue.50, blue.100)"
-        py={{ base: 16, md: 24 }}
+        py={{ base: 16 }}
         px={{ base: 4, md: 10 }}
         textAlign="center"
       >
