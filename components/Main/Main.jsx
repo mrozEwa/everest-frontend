@@ -4,7 +4,7 @@ import { Box, Text, Container, VStack, StackDivider } from "@chakra-ui/react";
 import Tabs from "./Tabs";
 
 function Main({ content }) {
-  console.log(content.data[1].fields.tresc.content[0].content.fo);
+  console.log(content.data[0].fields.tresc.content[0]);
   return (
     <Box>
       <Box bg="green.600" py={12} boxShadow="md">

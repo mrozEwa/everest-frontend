@@ -127,7 +127,12 @@ export default function Navigation({ children }) {
               spacing={4}
               display={{ base: "none", xl: "flex" }}
             >
-              <Flex justifyItems={"center"}>
+              <Flex
+                justifyItems={"center"}
+                alignItems={"center"}
+                gap={4}
+                textAlign={"center"}
+              >
                 {Links.map((link) => (
                   <NavLink key={link.href} href={link.href}>
                     {link.label}

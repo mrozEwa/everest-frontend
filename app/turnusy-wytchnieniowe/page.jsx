@@ -94,7 +94,7 @@ Chcemy, by każdy uczestnik – niezależnie od wieku i sprawności – poczuł 
       animation={`${slide} .8s ease-in-out`}
     >
       <Box
-        bgGradient="linear(to-t, blue.50, blue.100)"
+        bgGradient="linear(to-t, white, blue.100)"
         py={{ base: 10 }}
         textAlign="center"
         width="full"
