@@ -20,6 +20,9 @@ import {
 import { BiDonateHeart } from "react-icons/bi";
 import { BiRun } from "react-icons/bi";
 import { FaHandsHelping } from "react-icons/fa";
+import { FaHandPointRight } from "react-icons/fa";
+import NextLink from "next/link";
+import { Link } from "@chakra-ui/react";
 
 /*************  ✨ Windsurf Command ⭐  *************/
 /**
@@ -87,7 +90,9 @@ import { FaHandsHelping } from "react-icons/fa";
                 >
                   Możesz wpłacić darowiznę
                 </Heading>
-                <BiDonateHeart size="40px" />
+                <Box display={{ base: "none", md: "block" }}>
+                  <BiDonateHeart size="40px" />
+                </Box>
               </Flex>
 
               <Divider mb={2} />
@@ -116,7 +121,9 @@ import { FaHandsHelping } from "react-icons/fa";
                 >
                   Możesz biec razem z nami
                 </Heading>
-                <BiRun size="40px" />
+                <Box display={{ base: "none", md: "block" }}>
+                  <BiRun size="40px" />
+                </Box>
               </Flex>
               <Divider mb={2} />
               <Box fontSize="lg" lineHeight={1.7} textAlign="left">
@@ -126,7 +133,7 @@ import { FaHandsHelping } from "react-icons/fa";
                   innych firm!
                 </Text>
               </Box>
-              <Flex align="center" justify="center">
+              <Flex align="center" justify="start">
                 <Heading
                   as="h3"
                   fontSize="22px"
@@ -138,7 +145,9 @@ import { FaHandsHelping } from "react-icons/fa";
                 >
                   Możesz zostać wolontariuszem na obozie wytchnieniowym
                 </Heading>
-                <FaHandsHelping size="42px" />
+                <Box display={{ base: "none", md: "block" }}>
+                  <FaHandsHelping size="38px" />
+                </Box>
               </Flex>
               <Divider mb={0} />
               <Box fontSize="lg" lineHeight={1.7} textAlign="left">
@@ -149,7 +158,17 @@ import { FaHandsHelping } from "react-icons/fa";
                   wspierać ich w codziennych aktywnościach i tworzyć razem z
                   nami atmosferę akceptacji i radości.
                 </Text>
-                <Text>Zgłoś się</Text>
+
+                <Flex align="center" gap="2" mt="2">
+                  <FaHandPointRight size="26px" />
+                  <Link
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSec4AoAjCwynf77AGoQjJpCKKfGTzmnA2U4ULNSyuuF90pH4g/viewform"
+                    isExternal
+                    textDecoration={"underline"}
+                  >
+                    ZGŁOŚ SIĘ
+                  </Link>
+                </Flex>
               </Box>
             </Container>
             <Box
@@ -159,7 +178,7 @@ import { FaHandsHelping } from "react-icons/fa";
               _before={{
                 content: '""',
                 position: "absolute",
-                left: "-120px",
+                left: "-130px",
                 top: "50%",
                 display: beforeContent,
                 transform: "translateY(-50%) rotate(20deg)",

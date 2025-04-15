@@ -32,10 +32,10 @@ const Links = [
     label: "Podopieczni",
     href: "/podopieczni",
   },
-  // {
-  //   label: "Aktualności",
-  //   href: "/news",
-  // },
+  {
+    label: "Turnusy Wytchnieniowe",
+    href: "/turnusy-wytchnieniowe",
+  },
   {
     label: "Kontakt",
     href: "/kontakt",
@@ -127,22 +127,13 @@ export default function Navigation({ children }) {
               spacing={4}
               display={{ base: "none", xl: "flex" }}
             >
-              {/* <Link
-                href="/"
-                color={"white"}
-                _hover={{
-                  color: "gray.200",
-                }}
-                pl={6}
-                pb={1}
-              >
-                <AiOutlineHome size={"25px"} />
-              </Link> */}
-              {Links.map((link) => (
-                <NavLink key={link.href} href={link.href}>
-                  {link.label}
-                </NavLink>
-              ))}
+              <Flex justifyItems={"center"}>
+                {Links.map((link) => (
+                  <NavLink key={link.href} href={link.href}>
+                    {link.label}
+                  </NavLink>
+                ))}
+              </Flex>
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
