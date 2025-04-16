@@ -4,7 +4,7 @@ import { Box, Text, Container, VStack, StackDivider } from "@chakra-ui/react";
 import Tabs from "./Tabs";
 
 function Main({ content }) {
-  console.log(content.data[0].fields.tresc.content[1].content[2].value);
+  // console.log(content.data[0].fields.tresc.content[1].content[2].value);
   return (
     <Box>
       <Box bg="green.600" py={12} boxShadow="md">
@@ -24,8 +24,8 @@ function Main({ content }) {
                 }
               </Text>
               <br />
-              {content.data[0].fields.tresc.content[1].content[0].value}{" "}
-              <Text
+              {/* {content.data[0].fields.tresc.content[1].content[0].value} */}
+              {/* <Text
                 as="a"
                 href={
                   content.data[0].fields.tresc.content[1].content[1].data.uri
@@ -36,14 +36,14 @@ function Main({ content }) {
                   content.data[0].fields.tresc.content[1].content[1].content[0]
                     .value
                 }
-              </Text>
-              {content.data[0].fields.tresc.content[1].content[2].value}
+              </Text> */}
+              {/* {content.data[0].fields.tresc.content[1].content[2].value} */}
             </Text>
 
-            <Text color="white" fontSize="lg" lineHeight={2}>
+            {/* <Text color="white" fontSize="lg" lineHeight={2}>
               <b>{content.data[1].fields.tresc.content[0].content[0].value} </b>
               {content.data[1].fields.tresc.content[0].content[1].value}
-            </Text>
+            </Text> */}
           </VStack>
         </Container>
       </Box>
