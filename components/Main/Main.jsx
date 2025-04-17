@@ -24,6 +24,13 @@ function Main({ content }) {
                 }
               </Text>
               <br />
+              <Text>
+                W 2025 roku Fundacja Everest – we współpracy ze Stowarzyszeniem
+                Mudita, zorganizuje turnusy wytchnieniowe dla rodzin dzieci z
+                niepełnosprawnościami. Wiemy, jak bardzo potrzebny jest czas na
+                oddech, chwilę spokoju, regeneracji, rozmowy, sen albo po prostu
+                ciszę. Właśnie to chcemy Wam podarować.
+              </Text>
               {/* {content.data[0].fields.tresc.content[1].content[0].value} */}
               {/* <Text
                 as="a"
