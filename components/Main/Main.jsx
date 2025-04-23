@@ -10,7 +10,7 @@ function Main({ content }) {
       <Box bg="green.600" py={12} boxShadow="md">
         <Container maxW="5xl">
           <VStack divider={<StackDivider borderColor="gray.200" />} spacing={4}>
-            <Text color="white" fontSize="lg" lineHeight={2}>
+            <Box color="white" fontSize="lg" lineHeight={2}>
               <b>{content.data[0].fields.tresc.content[0].content[0].value}</b>
               {content.data[0].fields.tresc.content[0].content[1].value}
               <Text
@@ -45,7 +45,7 @@ function Main({ content }) {
                 }
               </Text> */}
               {/* {content.data[0].fields.tresc.content[1].content[2].value} */}
-            </Text>
+            </Box>
 
             {/* <Text color="white" fontSize="lg" lineHeight={2}>
               <b>{content.data[1].fields.tresc.content[0].content[0].value} </b>
