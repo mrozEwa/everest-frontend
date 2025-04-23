@@ -119,11 +119,16 @@ export default function Navigation({ children }) {
           <HStack alignItems={"center"}>
             <Flex minW={300} justify={"end"}>
               <Link href="/">
-                <Image
+                {/* <Image
                   src={Logo}
                   alt="logo fundacja everest"
                   width={"220"}
                   priority
+                /> */}
+                <img
+                  src="logo-transparent.webp" // lub ścieżka względna z public/
+                  alt="logo fundacja everest"
+                  width="220"
                 />
               </Link>
             </Flex>
