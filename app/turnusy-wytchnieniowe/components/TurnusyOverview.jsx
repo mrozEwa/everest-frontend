@@ -9,28 +9,28 @@ const TurnusyOverview = function () {
       text: `Turnusy wytchnieniowe to czas, kiedy osoby z niepełnosprawnością – dzieci i dorośli – mają zapewnioną indywidualną opiekę lub asystę przez 6 godzin dziennie. W tym czasie biorą udział w zajęciach dostosowanych do ich potrzeb i możliwości.
     
     Opieką otaczamy także rodzeństwo rozwijające się typowo – tak, by wszyscy czuli się zauważeni i zaopiekowani.`,
-      image: "./children4.jpg", // <-- Podmień na swój obraz
+      image: "./ewa1.webp", // <-- Podmień na swój obraz
     },
     {
       title: "Czas dla rodziców i opiekunów",
       text: `Podczas gdy dzieci i podopieczni są bezpieczni i radośnie spędzają czas, dorośli mogą odpocząć. Przespacerować się w lesie, poczytać książkę w hamaku, wypić kawę bez pośpiechu – albo po prostu się zatrzymać i złapać oddech.
     
     To czas na regenerację i zadbanie o siebie – bez poczucia winy.`,
-      image: "./children8.jpg",
+      image: "./ewa2.webp",
     },
     {
       title: "Wsparcie psychologiczne",
       text: `Podczas turnusów dostępne są indywidualne konsultacje psychologiczne oraz codzienne kręgi wsparcia. Zapraszamy do nich wszystkich uczestników – rodziny, wolontariuszy i osoby z niepełnosprawnością.
     
     To przestrzeń dzielenia się, słuchania i bycia wysłuchanym.`,
-      image: "./children5.jpg",
+      image: "./ewa3.webp",
     },
     {
       title: "Integracja i wspólna radość",
       text: `Turnusy odbywają się w pięknych, przyjaznych miejscach blisko natury. Organizujemy wycieczki, ogniska, warsztaty, pikniki, zajęcia integracyjne, a nawet masaże dla rodziców.
     
     Chcemy, by każdy uczestnik – niezależnie od wieku i sprawności – poczuł się częścią wspierającej, życzliwej społeczności.`,
-      image: "./children1.jpg",
+      image: "./ewa4.webp",
     },
   ];
   return (
