@@ -82,13 +82,20 @@ export default function Carousel({ images }) {
         {/* Slider */}
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {images.data.map((image, index) => (
-            <Image
+            // <Image
+            //   src={"https:" + image.fields.image.fields.file.url}
+            //   alt=""
+            //   width={1000}
+            //   height={1000}
+            //   key={index}
+            <img
               src={"https:" + image.fields.image.fields.file.url}
               alt=""
               width={1000}
               height={1000}
               key={index}
             />
+            // />
           ))}
         </Slider>
       </Box>

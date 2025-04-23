@@ -23,7 +23,14 @@ function Protege({ protege }) {
     <Card maxW="xl" color="gray.600" py={10}>
       <CardBody>
         <Flex align="center" direction="column">
-          <Image
+          {/* <Image
+            src={`https:${protege.fields.image.fields.file.url}`}
+            alt={protege.fields.name + " " + protege.fields.surname}
+            width={240}
+            height={240}
+            style={{ borderRadius: "10px" }}
+          /> */}
+          <img
             src={`https:${protege.fields.image.fields.file.url}`}
             alt={protege.fields.name + " " + protege.fields.surname}
             width={240}
