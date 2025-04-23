@@ -47,7 +47,7 @@ const TurnusyWrapper = ({ children }) => {
         <VStack spacing={6}>
           <Heading
             fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
-            animation={`${animation} .6s ease-in-out`}
+            // animation={`${animation} .6s ease-in-out`}
           >
             <Text
               as={"span"}
