@@ -1,5 +1,13 @@
 "use client";
-import { Box, Flex, Heading, VStack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  VStack,
+  Text,
+  keyframes,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { useEffect } from "react";
 
 const TurnusyWrapper = ({ children }) => {
@@ -9,6 +17,24 @@ const TurnusyWrapper = ({ children }) => {
       behavior: "smooth",
     });
   }, []);
+
+  const animation = keyframes`
+    0% {
+      transform: translateY(-10%);
+      
+      opacity: 0;
+    }
+    50% {
+  
+      transform: translateY(3%);
+  
+    }
+  
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  `;
   return (
     <Box bg="white" maxW="full" pt={24} overflow="hidden">
       {/* <Flex p={8} flex={1} align={"center"} justify={"center"}> */}
@@ -20,18 +46,30 @@ const TurnusyWrapper = ({ children }) => {
       >
         <VStack spacing={6}>
           <Heading
-            as="h1"
-            fontSize={{ base: "3xl" }}
-            fontWeight="bold"
-            color="blue.700"
+            fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+            animation={`${animation} .6s ease-in-out`}
           >
-            Turnusy wytchnieniowe – przestrzeń na oddech, odpoczynek i wspólnotę
+            <Text
+              as={"span"}
+              position={"relative"}
+              _after={{
+                content: "''",
+                width: "full",
+                height: useBreakpointValue({ base: "20%", md: "30%" }),
+                position: "absolute",
+                bottom: 1,
+                left: 0,
+                bg: "blue.400",
+                zIndex: -1,
+              }}
+            >
+              Turnusy wytchnieniowe –
+            </Text>
+            <br />{" "}
+            <Text color={"blue.400"} as={"span"}>
+              przestrzeń na oddech, odpoczynek i wspólnotę
+            </Text>{" "}
           </Heading>
-          <Text
-            fontSize={{ base: "xl", md: "2xl" }}
-            color="blue.700"
-            maxW="3xl"
-          ></Text>
         </VStack>
       </Box>
       {children}
