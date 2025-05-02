@@ -13,6 +13,7 @@ import {
 import { FaInfoCircle } from "react-icons/fa";
 
 const Zapisy = function ({ content }) {
+  console.log(content);
   return (
     <Box
       bgGradient="linear(to-b, blue.100, blue.50)"
@@ -37,15 +38,20 @@ const Zapisy = function ({ content }) {
             </ListItem>
           ))}
         </List>
-        <Button
-          colorScheme="teal"
-          size="lg"
-          letterSpacing={1}
-          as="a"
-          href={content[3].content[1].data.uri}
-        >
-          ZAPISZ SIĘ NA TURNUS
-        </Button>
+        <Text fontSize="lg" fontWeight="bold">
+          {content[3].content[0].value}
+        </Text>
+        {!content[3].content[0].value && (
+          <Button
+            colorScheme="teal"
+            size="lg"
+            letterSpacing={1}
+            as="a"
+            href={content[4].content[1].data.uri}
+          >
+            ZAPISZ SIĘ NA TURNUS
+          </Button>
+        )}
       </VStack>
     </Box>
   );
