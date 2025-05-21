@@ -4,7 +4,6 @@ import Protege from "@/app/podopieczni/components/Protege";
 
 export default async function page() {
   const proteges = await getProteges();
-
   return (
     <div>
       <Proteges>

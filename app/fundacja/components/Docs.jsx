@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { BsFiletypePdf } from "react-icons/bs";
 
-function Docs({ docs }) {
+function Docs({ docs, status }) {
   return (
     <Container my={10}>
       <VStack>
@@ -31,7 +31,7 @@ function Docs({ docs }) {
             leftIcon={<BsFiletypePdf />}
             colorScheme="gray"
             variant="solid"
-            href="statut.pdf"
+            href={status.data[0].fields.document.fields.file.url}
             target="_blank"
           >
             Statut fundacji
