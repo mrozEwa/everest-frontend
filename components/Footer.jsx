@@ -80,7 +80,7 @@ export default function Footer() {
               <Text fontSize={"sm"}>
                 Created by{" "}
                 <Link
-                  href="https://robertzuk.pl/"
+                  href="https://robertzuk.com/"
                   target="blank"
                   isexternal="true"
                   color="blue.700"
