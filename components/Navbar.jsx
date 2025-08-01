@@ -24,6 +24,10 @@ const Links = [
     href: "/",
   },
   {
+    label: "Aktualności",
+    href: "/aktualnosci",
+  },
+  {
     label: "Fundacja",
     href: "/fundacja",
   },
@@ -113,7 +117,7 @@ export default function Navigation({ children }) {
               )
             }
             aria-label={"Open Menu"}
-            display={{ xl: "none" }}
+            display={{ "2xl": "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack alignItems={"center"}>
@@ -135,7 +139,7 @@ export default function Navigation({ children }) {
             <HStack
               as={"nav"}
               spacing={4}
-              display={{ base: "none", xl: "flex" }}
+              display={{ base: "none", "2xl": "flex" }}
             >
               <Flex
                 justifyItems={"center"}
@@ -155,7 +159,7 @@ export default function Navigation({ children }) {
             <Button
               as={"a"}
               leftIcon={<BiRun size={25} />}
-              display={{ base: "none", xl: "inline-flex" }}
+              display={{ base: "none", "2xl": "inline-flex" }}
               fontSize={{ md: "sm", lg: "md" }}
               textTransform={"uppercase"}
               letterSpacing={1}

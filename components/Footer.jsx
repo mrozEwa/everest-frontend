@@ -60,9 +60,9 @@ export default function Footer() {
       pt="10"
     >
       <footer>
-        <Container as={Stack} maxW={"8xl"} pt={2} pb={8} px={10}>
+        <Container as={Stack} maxW={"8xl"} pt={2} pb={8} px={{ base: 4, md: 10 }}>
           <SimpleGrid
-            templateColumns={{ sm: "1fr 1fr", md: "2fr 2fr 2fr " }}
+            templateColumns={{ sm: "1fr 1fr", md: "2fr 2fr 2fr 2fr" }}
             spacing={8}
           >
             <Stack spacing={4}>
@@ -128,6 +128,14 @@ export default function Footer() {
                   </SocialButton>
                 </Stack>
               </Stack>
+            </Stack>
+            <Stack align={""} justify="" h="100%">
+              <Text>Informacje:</Text>
+              <Link href="/polityka-prywatnosci" passHref color="">
+                <Text fontSize="sm" color="" textDecoration="underline" >
+                  Polityka prywatności
+                </Text>
+              </Link>
             </Stack>
           </SimpleGrid>
         </Container>
