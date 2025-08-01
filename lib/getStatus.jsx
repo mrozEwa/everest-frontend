@@ -7,7 +7,7 @@ export default async function getSlider() {
   });
 
   const res = await client.getEntries({
-    content_type: "politykaPrywatnosci",
+    content_type: "status",
   });
 
   return {
