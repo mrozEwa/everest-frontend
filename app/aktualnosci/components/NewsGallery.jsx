@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Box,
   Image,
@@ -12,8 +12,8 @@ import {
   ModalCloseButton,
   IconButton,
   Flex,
-} from '@chakra-ui/react';
-import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
+} from "@chakra-ui/react";
+import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 
 export default function Gallery({ images }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -54,7 +54,7 @@ export default function Gallery({ images }) {
               height="300px"
               width="100%"
               transition="transform 0.3s ease"
-              _hover={{ transform: 'scale(1.05)', zIndex: 1 }}
+              _hover={{ transform: "scale(1.05)", zIndex: 1 }}
             />
             <Text mt={2} fontSize="sm">
               {img.fields.title}
@@ -66,13 +66,13 @@ export default function Gallery({ images }) {
       <Modal isOpen={isOpen} onClose={onClose} size="4xl" isCentered>
         <ModalOverlay />
         <ModalContent bg="gray.100" position="relative">
-          <ModalCloseButton color="gray.700" _hover={{ bg: 'gray.300' }} />
+          <ModalCloseButton color="gray.700" _hover={{ bg: "gray.300" }} />
 
           {selectedImage && (
             <ModalBody p={4} textAlign="center">
               <Text
                 mb={4}
-                fontSize={{ base: 'lg', md: '2xl' }}
+                fontSize={{ base: "lg", md: "2xl" }}
                 fontWeight="bold"
                 color="gray.800"
               >
@@ -81,7 +81,7 @@ export default function Gallery({ images }) {
 
               <Flex align="center" justify="center" position="relative">
                 <IconButton
-                  icon={<ArrowBackIcon />}
+                  icon={<ArrowBackIcon w={6} h={6} />}
                   onClick={prevImage}
                   position="absolute"
                   left="0"
@@ -89,7 +89,7 @@ export default function Gallery({ images }) {
                   transform="translateY(-50%)"
                   zIndex="1"
                   color="gray.700"
-                  _hover={{ bg: 'gray.200' }}
+                  _hover={{ bg: "gray.200" }}
                   variant="ghost"
                   aria-label="Previous image"
                 />
@@ -103,7 +103,7 @@ export default function Gallery({ images }) {
                 />
 
                 <IconButton
-                  icon={<ArrowForwardIcon />}
+                  icon={<ArrowForwardIcon w={6} h={6} />}
                   onClick={nextImage}
                   position="absolute"
                   right="0"
@@ -111,7 +111,7 @@ export default function Gallery({ images }) {
                   transform="translateY(-50%)"
                   zIndex="1"
                   color="gray.700"
-                  _hover={{ bg: 'gray.200' }}
+                  _hover={{ bg: "gray.200" }}
                   variant="ghost"
                   aria-label="Next image"
                 />
