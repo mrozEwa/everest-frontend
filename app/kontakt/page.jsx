@@ -98,7 +98,7 @@ export default function page() {
                         <input
                           type="hidden"
                           name="_next"
-                          value="http://localhost:3000/thanks"
+                          value="https://www.fundacjaeverest.pl/thanks"
                         ></input>
                         <input
                           type="hidden"

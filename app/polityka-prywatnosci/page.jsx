@@ -1,19 +1,17 @@
 import React from 'react'
 import PolitykaPrywatnosciWrapper from './components/PolitykaPrywatnosciWrapper'
 import getPolityka from '../../lib/getPolityka'
+import PolitykaPrywatnosci from './components/PolitykaPrywatnosci'
+
 
 
 async function page() {
 
     const politykaPrywatnosci = await getPolityka();
-    console.log(politykaPrywatnosci);
-
-
-
 
     return (
-        <PolitykaPrywatnosciWrapper politykaPrywatnosci={politykaPrywatnosci}>
-            <h1>Polityka prywatności</h1>
+        <PolitykaPrywatnosciWrapper>
+            <PolitykaPrywatnosci politykaPrywatnosci={politykaPrywatnosci} />
 
         </PolitykaPrywatnosciWrapper>
     )
