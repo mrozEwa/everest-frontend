@@ -194,7 +194,7 @@ import { Link } from "@chakra-ui/react";
         </TabPanel>
         <TabPanel p={0} bg="blue.700" animation={`${slideIn} .6s ease-in-out`}>
           <Grid gridTemplateColumns={gridTemplateColumns}>
-            <Container maxW="5xl" color="blue.50" py={12} px={8}>
+            <Container maxW="5xl" color="blue.50" py={6} px={6}>
               <Flex align="center">
                 <Text
                   fontSize="22px "
@@ -207,7 +207,7 @@ import { Link } from "@chakra-ui/react";
                 </Text>
               </Flex>
 
-              <Divider mb={8} />
+              <Divider mb={4} />
               <Box fontSize="lg" lineHeight={1.7} textAlign="left">
                 <Text>
                   Fundacja pomaga dzieciom chorym, niepełnosprawnym, znajdującym
@@ -215,7 +215,7 @@ import { Link } from "@chakra-ui/react";
                   podopiecznych, którym finansujemy leczenie, rehabilitację oraz
                   potrzebny sprzęt rehabilitacyjny.
                 </Text>
-                <Text fontWeight="600" pt="10">
+                <Text fontWeight="600" pt="6">
                   Jeśli również potrzebujesz pomocy – napisz do nas.
                 </Text>
                 <UnorderedList>
@@ -228,7 +228,7 @@ import { Link } from "@chakra-ui/react";
                     zaświadczenie lekarskie o stanie zdrowia
                   </ListItem>
                 </UnorderedList>
-                <Text pt="8">
+                <Text pt="4">
                   Napisz do nas: <b>ewa@fundacjaeverest.pl</b>
                 </Text>
               </Box>
