@@ -211,7 +211,7 @@ import { Link } from "@chakra-ui/react";
               <Box fontSize="lg" lineHeight={1.7} textAlign="left">
                 <Text>
                   Fundacja pomaga dzieciom chorym, niepełnosprawnym, znajdującym
-                  się w trudnej sytuacji życiowej. Każdego roku przyjmujemy 4
+                  się w trudnej sytuacji życiowej. Każdego roku przyjmujemy kilkunastu
                   podopiecznych, którym finansujemy leczenie, rehabilitację oraz
                   potrzebny sprzęt rehabilitacyjny.
                 </Text>
