@@ -77,7 +77,7 @@ import { Link } from "@chakra-ui/react";
       <TabPanels>
         <TabPanel p={0} bg="blue.700" animation={`${slideIn} .6s ease-in-out`}>
           <Grid gridTemplateColumns={gridTemplateColumns}>
-            <Container maxW="5xl" color="blue.50" py={4} px={8}>
+            <Container maxW="5xl" color="blue.50" py={8} px={8}>
               <Flex align="end">
                 <Heading
                   as="h2"
@@ -133,7 +133,7 @@ import { Link } from "@chakra-ui/react";
                   innych firm!
                 </Text>
               </Box>
-              <Flex align="center" justify="start">
+              {/* <Flex align="center" justify="start">
                 <Heading
                   as="h3"
                   fontSize="22px"
@@ -148,9 +148,9 @@ import { Link } from "@chakra-ui/react";
                 <Box display={{ base: "none", md: "block" }}>
                   <FaHandsHelping size="38px" />
                 </Box>
-              </Flex>
-              <Divider mb={0} />
-              <Box fontSize="lg" lineHeight={1.7} textAlign="left">
+              </Flex> */}
+              {/* <Divider mb={0} /> */}
+              {/* <Box fontSize="lg" lineHeight={1.7} textAlign="left">
                 <Text>
                   Chcesz spędzić 5 dni w wyjątkowym miejscu, pomagając dzieciom
                   lub dorosłym z niepełnosprawnością? Szukamy osób, które przez
@@ -169,7 +169,7 @@ import { Link } from "@chakra-ui/react";
                     ZGŁOŚ SIĘ
                   </Link>
                 </Flex>
-              </Box>
+              </Box> */}
             </Container>
             <Box
               overflow={"hidden"}
