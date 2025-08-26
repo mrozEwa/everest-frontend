@@ -84,12 +84,12 @@ function Main({ content, news }) {
         </Container>
       </Box>
 
-      <Box pt="8">
+      {/* <Box pt="8">
         <Box pb="10">
-        <SliderComponent news={news} />
+          <SliderComponent news={news} />
         </Box>
         <Tabs />
-      </Box>
+      </Box> */}
     </Box>
   );
 }
