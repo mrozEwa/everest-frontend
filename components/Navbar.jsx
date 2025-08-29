@@ -117,7 +117,7 @@ export default function Navigation({ children }) {
               )
             }
             aria-label={"Open Menu"}
-            display={{ "2xl": "none" }}
+            display={{ base: "flex", "2xl": "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack alignItems={"center"}>
@@ -182,7 +182,7 @@ export default function Navigation({ children }) {
           <Box
             py={4}
             px={2}
-            display={{ xl: "none" }}
+            display={{ base: "block", "2xl": "none" }}
             bg="blue.800"
             position={"relative"}
             zIndex={1}
