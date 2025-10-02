@@ -56,7 +56,6 @@
 
 // export default Main;
 
-
 "use client";
 
 import { Box, Text, Container, VStack, StackDivider } from "@chakra-ui/react";
@@ -85,9 +84,9 @@ function Main({ content, news }) {
       </Box>
 
       <Box pt="8">
-        {/* <Box pb="10">
+        <Box pb="10">
           <SliderComponent news={news} />
-        </Box> */}
+        </Box>
         <Tabs />
       </Box>
     </Box>

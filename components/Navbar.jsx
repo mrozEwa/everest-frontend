@@ -23,10 +23,10 @@ const Links = [
     label: "Strona Główna",
     href: "/",
   },
-  // {
-  //   label: "Aktualności",
-  //   href: "/aktualnosci",
-  // },
+  {
+    label: "Aktualności",
+    href: "/aktualnosci",
+  },
   {
     label: "Fundacja",
     href: "/fundacja",
