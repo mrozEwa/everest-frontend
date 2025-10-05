@@ -12,7 +12,11 @@ import {
   CardHeader,
   CardBody,
   Stack,
+  keyframes,
+  useBreakpointValue,
 } from "@chakra-ui/react";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
 
 const Team = [
   {
@@ -45,74 +49,82 @@ export default function About({ content }) {
       behavior: "smooth",
     });
   }, []);
+
+  const animation = keyframes`
+    0% {
+      transform: translateY(-10%);
+
+      opacity: 0;
+    }
+    50% {
+
+      transform: translateY(3%);
+
+    }
+
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  `;
+
+  const options = {
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (node, children) => (
+        <Text mb={4} fontSize="md" color="blue.700" lineHeight="tall">
+          {children}
+        </Text>
+      ),
+    },
+  };
+
+  const fundacjaContent = content.data.find(item =>
+    item.fields.title?.toLowerCase() === 'fundacja'
+  );
+
+  console.log('Content data:', content.data);
+  console.log('Fundacja content:', fundacjaContent);
   return (
     <Box>
       <Flex pt="120px" w={"full"} justify={"center"}>
         <Container centerContent maxW="8xl">
           <Container centerContent maxW="5xl">
             <Heading
-              bgGradient="linear(to-r, purple.800, blue.500)"
-              bgClip="text"
-              fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
-              fontWeight="extrabold"
+              fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+              animation={`${animation} .6s ease-in-out`}
               pb={8}
             >
-              Misja i cele
+              <Text
+                as={"span"}
+                position={"relative"}
+                _after={{
+                  content: "''",
+                  width: "full",
+                  height: useBreakpointValue({ base: "20%", md: "30%" }),
+                  position: "absolute",
+                  bottom: 1,
+                  left: 0,
+                  bg: "blue.400",
+                  zIndex: -1,
+                }}
+              >
+                Misja i cele
+              </Text>
             </Heading>
-            <VStack
-              divider={<StackDivider borderColor="gray.200" />}
-              spacing={4}
-              align="stretch"
-              color="blue.700"
-            >
-              <Text>
-                Fundacja Everest powstała w 2012 roku. Inspiracją do jej
-                utworzenia była nasza pasja – bieganie. Zastanawialiśmy się jak
-                można pomóc innym wykorzystując nasze zamiłowanie do sportu i
-                biegania. Zainspirowani setkami przebiegniętych kilometrów
-                powołaliśmy do życia pomysł organizacji charytatywnego biegu dla
-                firm. Od początku praca przy tworzeniu tego eventu dawała nam
-                dużą radość. Naszym motorem napędowym była Alicja – pierwsza
-                podopieczna Fundacji, dziewczynka dla której zawodnicy pobiegli
-                w 1. Biegu Firmowym. To myśl o możliwościach jakie dadzą Ali
-                zebrane pieniądze napędzała nas do działania. Ali groziła wtedy
-                amputacja nóżki. Dzięki przekazanym Alicji środkom mogła
-                pojechać do Stanów Zjednoczonych na operację i… udało się! Nóżka
-                została uratowana, a Alunia dzielnie ćwiczy, aby kiedyś pobiec w
-                naszym biegu.
-              </Text>
-              <Text>
-                {content.data[2].fields.tresc.content[0].content[0].value}
-              </Text>
-              <Text>
-                Każdego roku wybieramy podopiecznych Biegu Firmowego. Nasi
-                podopieczni to dzieci chore, niepełnosprawne, znajdujące się w
-                trudnej sytuacji życiowej, których jedyną szansą na sprawniejsze
-                życie jest kosztowna, intensywna rehabilitacja i leczenie. Co
-                roku fundujemy naszym beneficjentom terapię, która jest
-                najbardziej przystosowana do ich potrzeb. Staramy się, aby
-                rodzaj rehabilitacji i sprzęt były odpowiednio dobrane i pomogły
-                im zrobić krok w stronę większej sprawności i samodzielności.
-                Poprawa sprawności naszych podopiecznych jest dla nas ogromną
-                radością. Chcemy być stale obecni w ich życiu, wpieramy ich, a
-                oni dają nam siłę do podejmowania kolejnych wyzwań.
-              </Text>
-              <Text>
-                Fundacja w 2013 r. zorganizowała także Bieg dla kobiet – w
-                pierwszej edycji wzięło w nim udział 500 pań. Z imprezą wiązała
-                się kampania na rzecz profilaktyki raka piersi i raka szyjki
-                macicy. Podczas biegu Panie mogły dowiedzieć się więcej o
-                samobadaniu piersi oraz porozmawiać z amazonkami, które chorobę
-                mają za sobą.
-              </Text>
-            </VStack>
+            <Box>
+              {fundacjaContent ? (
+                documentToReactComponents(fundacjaContent.fields.tresc, options)
+              ) : (
+                content.data[0] && documentToReactComponents(content.data[0].fields.tresc, options)
+              )}
+            </Box>
           </Container>
           <Container centerContent maxW="8xl">
             <VStack>
               <Heading
                 bgGradient="linear(to-l, purple.800, blue.500)"
                 bgClip="text"
-                fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
+                fontSize={{ base: "xl", sm: "2xl", md: "4xl" }}
                 fontWeight="extrabold"
                 py={10}
               >
