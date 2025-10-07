@@ -122,13 +122,26 @@ export default function About({ content }) {
           <Container centerContent maxW="8xl">
             <VStack>
               <Heading
-                bgGradient="linear(to-l, purple.800, blue.500)"
-                bgClip="text"
-                fontSize={{ base: "xl", sm: "2xl", md: "4xl" }}
-                fontWeight="extrabold"
+                fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+                pb={8}
                 py={10}
               >
-                Nasz Zespół
+                <Text
+                  as={"span"}
+                  position={"relative"}
+                  _after={{
+                    content: "''",
+                    width: "full",
+                    height: useBreakpointValue({ base: "20%", md: "30%" }),
+                    position: "absolute",
+                    bottom: 1,
+                    left: 0,
+                    bg: "blue.400",
+                    zIndex: -1,
+                  }}
+                >
+                  Nasz Zespół
+                </Text>
               </Heading>
               <Flex gap={4} direction={{ base: "column", lg: "row" }}>
                 {Team.map((item) => {
