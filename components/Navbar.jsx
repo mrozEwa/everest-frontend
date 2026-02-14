@@ -9,8 +9,12 @@ import {
   useDisclosure,
   Stack,
   Collapse,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import { Link } from "@chakra-ui/next-js";
 import Image from "next/image";
 import { BiRun } from "react-icons/bi";
@@ -156,26 +160,45 @@ export default function Navigation({ children }) {
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
-            <Button
-              as={"a"}
-              leftIcon={<BiRun size={25} />}
-              display={{ base: "none", "2xl": "inline-flex" }}
-              fontSize={{ md: "sm", lg: "md" }}
-              textTransform={"uppercase"}
-              letterSpacing={1}
-              fontWeight={500}
-              color={"white"}
-              bg={"blue.600"}
-              mx="2"
-              mr="8"
-              href={"https://biegfirmowy.pl"}
-              target="_blank"
-              _hover={{
-                bg: "blue.400",
-              }}
-            >
-              Bieg Firmowy
-            </Button>
+            <Menu>
+              <MenuButton
+                as={Button}
+                leftIcon={<BiRun size={25} />}
+                rightIcon={<ChevronDownIcon />}
+                display={{ base: "none", "2xl": "inline-flex" }}
+                fontSize={{ md: "sm", lg: "md" }}
+                textTransform={"uppercase"}
+                letterSpacing={1}
+                fontWeight={500}
+                color={"white"}
+                bg={"blue.600"}
+                mx="2"
+                mr="8"
+                _hover={{
+                  bg: "blue.400",
+                }}
+              >
+                Bieg Firmowy
+              </MenuButton>
+              <MenuList>
+                <MenuItem
+                  as={"a"}
+                  href={"https://biegfirmowy.pl"}
+                  target="_blank"
+                  color={"gray.800"}
+                >
+                  Bieg Firmowy
+                </MenuItem>
+                <MenuItem
+                  as={"a"}
+                  href={"https://biegfirmowy.pl/nocny-bieg-firmowy"}
+                  target="_blank"
+                  color={"gray.800"}
+                >
+                  Nocny Bieg Firmowy
+                </MenuItem>
+              </MenuList>
+            </Menu>
           </Flex>
         </Flex>
         <Collapse in={isOpen} animateOpacity>
@@ -219,6 +242,18 @@ export default function Navigation({ children }) {
                 letterSpacing={1}
               >
                 Bieg firmowy
+              </Link>
+              <Link
+                as={"a"}
+                pl={2}
+                onClick={onClose}
+                href={"https://biegfirmowy.pl/nocny-bieg-firmowy"}
+                target="_blank"
+                color="white"
+                textTransform={"uppercase"}
+                letterSpacing={1}
+              >
+                Nocny Bieg Firmowy
               </Link>
             </Stack>
           </Box>
