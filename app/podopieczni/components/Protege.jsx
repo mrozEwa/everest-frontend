@@ -21,13 +21,15 @@ function Protege({ protege }) {
     <Card maxW="xl" color="gray.600" py={4}>
       <CardBody>
         <Flex align="center" direction="column">
-          <img
-            src={`https:${image.fields.file.url}`}
-            alt={`${name} ${surname}`}
-            width={240}
-            height={240}
-            style={{ borderRadius: "10px" }}
-          />
+          {image?.fields?.file?.url && (
+            <img
+              src={`https:${image.fields.file.url}`}
+              alt={`${name} ${surname}`}
+              width={240}
+              height={240}
+              style={{ borderRadius: "10px" }}
+            />
+          )}
 
           <Stack mt="6" spacing="3" textAlign="center">
             <Heading size="md">
