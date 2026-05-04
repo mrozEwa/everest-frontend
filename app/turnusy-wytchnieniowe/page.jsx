@@ -3,6 +3,8 @@ import TurnusyWrapper from "./components/TurnusyWrapper";
 import TurnusyOverview from "./components/TurnusyOverview";
 import Terminarz from "./components/Terminarz";
 import Zapewniamy from "./components/Zapewniamy";
+
+export const revalidate = 60;
 import Zapisy from "./components/Zapisy";
 
 export default async function page() {

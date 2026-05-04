@@ -3,6 +3,8 @@ import Main from "@/components/Main/Main";
 import getNews from "@/lib/getNews";
 import getContent from "@/lib/getContent";
 
+export const revalidate = 60;
+
 
 export default async function Home() {
   const content = await getContent();

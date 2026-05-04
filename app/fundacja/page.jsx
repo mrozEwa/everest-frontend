@@ -3,6 +3,8 @@ import getDocs from "@/lib/getDocs";
 import getContent from "@/lib/getContent";
 import getStatus from "@/lib/getStatus";
 
+export const revalidate = 60;
+
 import Gallery from "@/app/fundacja/components/Gallery";
 import About from "@/app/fundacja/components/About";
 import Docs from "@/app/fundacja/components/Docs";
