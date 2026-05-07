@@ -17,7 +17,14 @@ function NewsItemDetails({ newsItem }) {
     });
   }
 
-  const images = newsItem?.fields.gallery
+  function getYoutubeEmbedUrl(url) {
+    const match = url.match(/(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+    return match ? `https://www.youtube.com/embed/${match[1]}` : null;
+  }
+
+  const images = newsItem?.fields.gallery;
+  const youtubeUrl = newsItem?.fields.videoUrl;
+  const embedUrl = youtubeUrl ? getYoutubeEmbedUrl(youtubeUrl) : null;
 
   const options = {
     renderNode: {
@@ -47,13 +54,25 @@ function NewsItemDetails({ newsItem }) {
       bg="white"
     >
       <VStack spacing={6} align="stretch">
-        <Image
-          src={newsItem?.fields.image.fields.file.url}
-          alt={newsItem?.fields.image.fields.title}
-          borderRadius="50px"
-          objectFit="cover"
-          maxH="400px"
-        />
+        {embedUrl ? (
+          <Box
+            as="iframe"
+            src={embedUrl}
+            borderRadius="50px"
+            width="100%"
+            height={{ base: '220px', md: '400px' }}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        ) : (
+          <Image
+            src={newsItem?.fields.image.fields.file.url}
+            alt={newsItem?.fields.image.fields.title}
+            borderRadius="50px"
+            objectFit="cover"
+            maxH="400px"
+          />
+        )}
 
         <Heading as="h1" size="xl">
           {newsItem?.fields.tytul}

@@ -8,7 +8,7 @@ export default async function getNews() {
 
   const res = await client.getEntries({
     content_type: "aktualnosci",
-    order: "sys.createdAt",
+    order: "-fields.data",
   });
 
   return {

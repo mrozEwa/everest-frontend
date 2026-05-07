@@ -19,6 +19,8 @@ export default function Gallery({ images }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedIndex, setSelectedIndex] = useState(null);
 
+  if (!images?.length) return null;
+
   const openModalAt = (index) => {
     setSelectedIndex(index);
     onOpen();
