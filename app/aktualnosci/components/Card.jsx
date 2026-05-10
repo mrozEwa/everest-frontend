@@ -48,7 +48,7 @@ function CardComponent({ newsItem }) {
           width="100%"
           variant="outline"
           colorScheme="blue"
-          onClick={() => router.push(`/aktualnosci/${newsItem.fields.slug}`)}
+          onClick={() => router.push(`/aktualnosci/${encodeURIComponent(newsItem.fields.slug)}`)}
         >
           Szczegóły
         </Button>

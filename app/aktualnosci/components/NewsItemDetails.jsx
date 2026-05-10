@@ -22,7 +22,7 @@ function NewsItemDetails({ newsItem }) {
     return match ? `https://www.youtube.com/embed/${match[1]}` : null;
   }
 
-  const images = newsItem?.fields.gallery;
+  const images = newsItem?.fields.galery;
   const youtubeUrl = newsItem?.fields.videoUrl;
   const embedUrl = youtubeUrl ? getYoutubeEmbedUrl(youtubeUrl) : null;
 
@@ -66,8 +66,8 @@ function NewsItemDetails({ newsItem }) {
           />
         ) : (
           <Image
-            src={newsItem?.fields.image.fields.file.url}
-            alt={newsItem?.fields.image.fields.title}
+            src={newsItem?.fields.image?.fields?.file?.url}
+            alt={newsItem?.fields.image?.fields?.title}
             borderRadius="50px"
             objectFit="cover"
             maxH="400px"

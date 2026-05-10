@@ -32,9 +32,13 @@ const Terminarz = function ({ content }) {
             <ListItem key={index} pl={4}>
               <ListIcon as={FaCalendarAlt} color="blue.600" />
               <strong>{item.content[0].content[0].value}</strong>
-              <br />
-              <ListIcon as={FaSearchLocation} color="blue.600" />
-              {item.content[0].content[1].value}
+              {item.content[1]?.content[0]?.value && (
+                <>
+                  <br />
+                  <ListIcon as={FaSearchLocation} color="blue.600" />
+                  {item.content[1].content[0].value}
+                </>
+              )}
             </ListItem>
           ))}
         </List>

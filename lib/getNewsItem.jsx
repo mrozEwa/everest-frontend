@@ -6,9 +6,11 @@ export default async function getNewsItem(slug) {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
+  const decodedSlug = decodeURIComponent(slug);
+
   const res = await client.getEntries({
     content_type: "aktualnosci",
-    "fields.slug": slug,
+    "fields.slug": decodedSlug,
     limit: 1,
   });
 

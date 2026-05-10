@@ -38,10 +38,12 @@ const Zapisy = function ({ content }) {
             </ListItem>
           ))}
         </List>
-        <Text fontSize="lg" fontWeight="bold">
-          {content[3].content[0].value}
-        </Text>
-        {!content[3].content[0].value && (
+        {content[3]?.content[0]?.value && (
+          <Text fontSize="lg" fontWeight="bold">
+            {content[3].content[0].value}
+          </Text>
+        )}
+        {content[4]?.content[1]?.data?.uri && (
           <Button
             colorScheme="teal"
             size="lg"
