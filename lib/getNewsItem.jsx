@@ -11,6 +11,7 @@ export default async function getNewsItem(slug) {
   const res = await client.getEntries({
     content_type: "aktualnosci",
     "fields.slug": decodedSlug,
+    include: 2,
     limit: 1,
   });
 
