@@ -3,7 +3,6 @@ import React from "react";
 import {
   Box,
   IconButton,
-  useBreakpointValue,
   Container,
 } from "@chakra-ui/react";
 // Here we have used react-icons package for the icons
@@ -30,9 +29,6 @@ export default function Carousel({ images }) {
 
   // These are the breakpoints which changes the position of the
   // buttons as the screen size changes
-  const top = useBreakpointValue({ base: "90%", md: "50%" });
-  const side = useBreakpointValue({ base: "30%", md: "40px" });
-
   return (
     <Container centerContent maxW="8xl">
       <Box
@@ -58,8 +54,8 @@ export default function Carousel({ images }) {
         <IconButton
           aria-label="left-arrow"
           position="absolute"
-          left={side}
-          top={top}
+          left={{ base: "30%", md: "40px" }}
+          top={{ base: "90%", md: "50%" }}
           transform={"translate(0%, -50%)"}
           zIndex={1}
           onClick={() => slider?.slickPrev()}
@@ -69,10 +65,9 @@ export default function Carousel({ images }) {
         {/* Right Icon */}
         <IconButton
           aria-label="right-arrow"
-          // variant="ghost"
           position="absolute"
-          right={side}
-          top={top}
+          right={{ base: "30%", md: "40px" }}
+          top={{ base: "90%", md: "50%" }}
           transform={"translate(0%, -50%)"}
           zIndex={1}
           onClick={() => slider?.slickNext()}

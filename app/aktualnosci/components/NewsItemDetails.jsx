@@ -10,11 +10,10 @@ function NewsItemDetails({ newsItem }) {
 
   function formatDate(dateString) {
     const date = new Date(dateString);
-    return date.toLocaleDateString('pl-PL', {
-      day: '2-digit',
-      month: 'long',
-      year: 'numeric',
-    });
+    const day = String(date.getUTCDate()).padStart(2, '0');
+    const year = date.getUTCFullYear();
+    const months = ['stycznia','lutego','marca','kwietnia','maja','czerwca','lipca','sierpnia','września','października','listopada','grudnia'];
+    return `${day} ${months[date.getUTCMonth()]} ${year}`;
   }
 
   function getYoutubeEmbedUrl(url) {
