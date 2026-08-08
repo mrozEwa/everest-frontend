@@ -23,7 +23,7 @@ function Protege({ protege }) {
         <Flex align="center" direction="column">
           {image?.fields?.file?.url && (
             <img
-              src={`https:${image.fields.file.url}`}
+              src={`https:${image.fields.file.url}?w=500&fm=webp&q=75`}
               alt={`${name} ${surname}`}
               width={240}
               height={240}

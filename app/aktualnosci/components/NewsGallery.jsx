@@ -48,7 +48,7 @@ export default function Gallery({ images }) {
             textAlign="center"
           >
             <Image
-              src={`https:${img.fields.file.url}`}
+              src={`https:${img.fields.file.url}?w=600&fm=webp&q=75`}
               alt={img.fields.title}
               objectFit="cover"
               borderRadius="xl"
@@ -97,7 +97,7 @@ export default function Gallery({ images }) {
                 />
 
                 <Image
-                  src={`https:${selectedImage.file.url}`}
+                  src={`https:${selectedImage.file.url}?w=1400&fm=webp&q=85`}
                   alt={selectedImage.title}
                   mx="auto"
                   maxHeight="80vh"

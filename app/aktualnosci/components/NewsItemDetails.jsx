@@ -66,7 +66,7 @@ function NewsItemDetails({ newsItem }) {
           />
         ) : (
           <Image
-            src={newsItem?.fields.image?.fields?.file?.url}
+            src={newsItem?.fields.image?.fields?.file?.url ? `https:${newsItem.fields.image.fields.file.url}?w=1200&fm=webp&q=80` : undefined}
             alt={newsItem?.fields.image?.fields?.title}
             borderRadius="50px"
             objectFit="cover"

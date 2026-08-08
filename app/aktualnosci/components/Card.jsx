@@ -22,8 +22,10 @@ function getYoutubeThumbnail(url) {
 function CardComponent({ newsItem }) {
   const router = useRouter();
 
-  const imageSrc = newsItem.fields.image?.fields.file.url
-    ?? getYoutubeThumbnail(newsItem.fields.videoUrl);
+  const contentfulUrl = newsItem.fields.image?.fields.file.url;
+  const imageSrc = contentfulUrl
+    ? `https:${contentfulUrl}?w=600&fm=webp&q=75`
+    : getYoutubeThumbnail(newsItem.fields.videoUrl);
 
   return (
     <Card maxW="sm">
