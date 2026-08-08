@@ -6,7 +6,6 @@ import {
   VStack,
   Text,
   keyframes,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 
@@ -48,7 +47,7 @@ const AktualnosciWrapper = ({ children }) => {
             _after={{
               content: "''",
               width: "full",
-              height: useBreakpointValue({ base: "20%", md: "30%" }),
+              height: "20%",
               position: "absolute",
               bottom: 1,
               left: 0,

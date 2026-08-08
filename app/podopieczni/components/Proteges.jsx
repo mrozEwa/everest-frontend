@@ -4,7 +4,6 @@ import {
   Flex,
   Heading,
   Box,
-  useBreakpointValue,
   Text,
   keyframes,
 } from "@chakra-ui/react";
@@ -47,7 +46,7 @@ const Proteges = ({ children }) => {
             _after={{
               content: "''",
               width: "full",
-              height: useBreakpointValue({ base: "20%", md: "30%" }),
+              height: "20%",
               position: "absolute",
               bottom: 1,
               left: 0,

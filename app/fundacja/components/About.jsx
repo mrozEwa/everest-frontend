@@ -13,7 +13,6 @@ import {
   CardBody,
   Stack,
   keyframes,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
@@ -98,7 +97,7 @@ export default function About({ content }) {
                 _after={{
                   content: "''",
                   width: "full",
-                  height: useBreakpointValue({ base: "20%", md: "30%" }),
+                  height: "20%",
                   position: "absolute",
                   bottom: 1,
                   left: 0,
@@ -130,7 +129,7 @@ export default function About({ content }) {
                   _after={{
                     content: "''",
                     width: "full",
-                    height: useBreakpointValue({ base: "20%", md: "30%" }),
+                    height: "20%",
                     position: "absolute",
                     bottom: 1,
                     left: 0,
