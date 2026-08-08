@@ -13,7 +13,6 @@ import {
 import { FaInfoCircle } from "react-icons/fa";
 
 const Zapisy = function ({ content }) {
-  console.log(content);
   return (
     <Box
       bgGradient="linear(to-b, blue.100, blue.50)"

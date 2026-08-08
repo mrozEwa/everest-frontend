@@ -82,8 +82,6 @@ export default function About({ content }) {
     item.fields.title?.toLowerCase() === 'fundacja'
   );
 
-  console.log('Content data:', content.data);
-  console.log('Fundacja content:', fundacjaContent);
   return (
     <Box>
       <Flex pt="120px" w={"full"} justify={"center"}>

@@ -15,7 +15,6 @@ export default async function page() {
   const content = await getContent();
   const status = await getStatus();
 
-  console.log(status.data[0].fields.document.fields.file.url);
   return (
     <div>
       <About content={content} />
